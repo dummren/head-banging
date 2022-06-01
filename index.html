@@ -1,0 +1,29 @@
+<!-- I wrote this shit code in 10 minutes don't hit me -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Head banging</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="helper.js"></script>
+	<script>
+		function pageLoaded() {
+			
+		}
+		
+		function udar() {
+			if (getE('ass').src.endsWith('images/1.jpg'))
+				getE('ass').src = 'images/2.jpg';
+			else
+				getE('ass').src = 'images/1.jpg';
+		}
+	</script>
+</head>
+
+<body onload="pageLoaded()" align="center">
+	<image id="ass" src="images/1.jpg" onclick="udar()" style="cursor: pointer"></image>
+</body>
+
+</html>

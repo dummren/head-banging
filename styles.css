@@ -1,0 +1,155 @@
+@font-face
+{
+	font-family: iosevka;
+	src: url("fonts/iosevka.ttf");
+}
+
+:root
+{
+	--bg-color-prev: #282832;
+	--bg-color-sec: #282832;
+	--fg-color-prev: #343450;
+	--fg-color-sec: #606080;
+	--button-prev: #404050;
+	--button-sec: #506050;
+	--selection: #506050;
+	--text-color: #a0a0c0;
+	--padding-default: 5px;
+	--margin-default: 5px;
+	--margin-hr: 15px;
+	--border-radius-default: 10px;
+	--border-default: 2px solid var(--fg-color-prev);
+	--border-hr: 2px dashed var(--fg-color-sec);
+	--hr-bg: var(--fg-color-prev);
+	--default-box-shadow: -2px 2px 5px var(--fg-color-sec);
+	--active-box-shadow: 0 0 10px var(--button-sec);
+	--default-button-trans: 0.1s all;
+}
+
+::-webkit-scrollbar
+{
+	display: none;
+}
+
+::selection
+{
+	background: var(--selection);
+}
+
+*
+{
+	position: relative;
+	padding: var(--padding-default);
+	margin: var(--margin-default);
+	border: none;
+	outline: none;
+	z-index: 10;
+	font-size: 20px;
+	font-family: iosevka;
+	-webkit-tap-highlight-color: transparent;
+	color: var(--text-color);
+	scrollbar-width: none;
+	border-radius: var(--border-radius-default);
+}
+
+h1
+{
+	font-size: 60px;
+}
+
+h2
+{
+	font-size: 50px;
+}
+
+h3
+{
+	font-size: 40px;
+}
+
+h4
+{
+	font-size: 30px;
+}
+
+h5
+{
+	font-size: 20px;
+}
+
+h6
+{
+	font-size: 10px;
+}
+
+body
+{
+	overflow: hidden;
+	background: var(--bg-color-prev);
+	padding: 0;
+	margin: 0;
+}
+
+input
+{
+	border: var(--border-default);
+	box-shadow: var(--default-box-shadow);
+	transition: var(--default-button-trans);
+}
+
+input[type=button],
+input[type=number]
+{
+	background: var(--button-prev);
+}
+
+input[type=button]
+{
+	cursor: pointer;
+}
+
+input[type=number]
+{
+	cursor: text;
+}
+
+input[type=button]:hover
+{
+	background: var(--button-sec);
+}
+
+input[type=button]:active
+{
+	box-shadow: var(--active-box-shadow);
+	transform: translate(-2px, 2px);
+}
+
+hr
+{
+	border-top: var(--border-hr);
+	padding: 0;
+	margin: 0;
+	margin-top: var(--margin-hr);
+	margin-bottom: var(--margin-hr);
+	width: calc(100% - var(--margin-default) * 3 - var(--padding-default) * 3);
+	box-shadow: var(--default-box-shadow);
+}
+
+.page-div
+{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: linear-gradient(to bottom right, var(--bg-color-prev), var(--bg-color-sec));
+	margin: 0;
+}
+
+.output
+{
+	width: calc(100% - var(--margin-default) * 5 - var(--padding-default) * 4);
+	word-wrap: break-word;
+	cursor: text;
+	background: var(--button-prev);
+	line-height: 20px;
+}
